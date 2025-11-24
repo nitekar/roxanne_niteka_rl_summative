@@ -96,6 +96,10 @@ class AgroTrackEnv(gym.Env):
     
     def step(self, action):
         """Execute one step in the environment."""
+        # Convert numpy array to int if needed
+        if hasattr(action, 'item'):
+            action = action.item()
+        
         self.current_step += 1
         self.days_since_harvest += 1
         
