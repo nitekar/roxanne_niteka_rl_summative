@@ -1,0 +1,7 @@
+{
+  "best_config": "dqn_aggressive",
+  "mean_reward": 109.71260403969727,
+  "std_reward": 13.165929427661034,
+  "mean_efficiency": 91.63787374195047,
+  "model_path": "models/dqn/dqn_aggressive/final_model.zip"
+}

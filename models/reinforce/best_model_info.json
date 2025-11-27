@@ -1,0 +1,7 @@
+{
+  "best_config": "reinforce_low_gamma",
+  "mean_reward": 103.3790496556057,
+  "std_reward": 9.919471553702918,
+  "mean_efficiency": 89.62956397441579,
+  "model_path": "models/reinforce/reinforce_low_gamma/final_model.pth"
+}

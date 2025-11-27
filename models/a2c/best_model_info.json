@@ -1,0 +1,7 @@
+{
+  "best_config": "a2c_entropy",
+  "mean_reward": 121.47395832044438,
+  "std_reward": 4.394173556542423,
+  "mean_efficiency": 92.78381056776597,
+  "model_path": "models/a2c/a2c_entropy/final_model.zip"
+}

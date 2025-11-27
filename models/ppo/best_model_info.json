@@ -1,0 +1,7 @@
+{
+  "best_config": "ppo_tight_clip",
+  "mean_reward": 118.98039852631405,
+  "std_reward": 11.073294810073353,
+  "mean_efficiency": 93.67982342920374,
+  "model_path": "models/ppo/ppo_tight_clip/final_model.zip"
+}
