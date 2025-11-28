@@ -130,7 +130,7 @@ python main.py --episodes 3
 
 | Algorithm | Configs | Timesteps/Episodes | Training Time |
 |-----------|---------|-------------------|---------------|
-| **DQN** | 10 | 100k timesteps | ~5-7 hours |
+| **DQN** | 10 | 100k timesteps | 25 minutes|
 | **PPO** | 10 | 100k timesteps | ~4-6 hours |
 | **A2C** | 10 | 100k timesteps | ~3-5 hours |
 | **REINFORCE** | 10 | 1000 episodes | ~2-4 hours |
@@ -154,6 +154,109 @@ python training/reinforce_training.py --episodes 1000
 ---
 
 ##  Evaluation
+
+Performance Summary
+--------------------------------------------------------------------------------
+
+Rankings by Mean Reward:
+
+1. PPO          -   118.70 �  12.04
+2. A2C          -   117.54 �  10.89
+3. DQN          -   108.75 �  11.68
+4. REINFORCE    -   100.83 �   8.77
+
+================================================================================
+Detailed Metrics
+================================================================================
+
+Algorithm: PPO
+--------------------------------------------------------------------------------
+  Reward:            118.70 �  12.04
+  Efficiency:        92.98% �  2.11%
+  Food Saved:          3.22 �   0.60
+  Food Spoiled:        0.23 �   0.04
+  Food Reused:         0.00 �   0.00
+  Revenue:        $    0.00 � $  0.00
+
+  Action Distribution:
+    Monitor     :   0.00
+    Basic Preservation:  32.06
+    Transport to Market:   6.84
+    Reuse/Donate:   0.00
+    Advanced Preservation:   1.06
+    Emergency Transport:   0.00
+    Compost     :  55.06
+    Process Products:   0.00
+
+Algorithm: A2C
+--------------------------------------------------------------------------------
+  Reward:            117.54 �  10.89
+  Efficiency:        92.69% �  1.95%
+  Food Saved:          3.21 �   0.60
+  Food Spoiled:        0.24 �   0.03
+  Food Reused:         0.00 �   0.00
+  Revenue:        $    0.00 � $  0.00
+
+  Action Distribution:
+    Monitor     :   0.00
+    Basic Preservation:  34.32
+    Transport to Market:   4.56
+    Reuse/Donate:  56.10
+    Advanced Preservation:   0.00
+    Emergency Transport:   0.00
+    Compost     :   0.30
+    Process Products:   0.00
+
+Algorithm: DQN
+--------------------------------------------------------------------------------
+  Reward:            108.75 �  11.68
+  Efficiency:        91.55% �  1.92%
+  Food Saved:          2.54 �   0.34
+  Food Spoiled:        0.23 �   0.05
+  Food Reused:         0.00 �   0.00
+  Revenue:        $    0.00 � $  0.00
+
+  Action Distribution:
+    Monitor     :   0.00
+    Basic Preservation:  29.34
+    Transport to Market:  14.20
+    Reuse/Donate:   1.48
+    Advanced Preservation:   1.62
+    Emergency Transport:   0.00
+    Compost     :  47.76
+    Process Products:   0.00
+
+Algorithm: REINFORCE
+--------------------------------------------------------------------------------
+  Reward:            100.83 �   8.77
+  Efficiency:        88.54% �  3.29%
+  Food Saved:          2.84 �   0.51
+  Food Spoiled:        0.36 �   0.09
+  Food Reused:         0.00 �   0.00
+  Revenue:        $    0.00 � $  0.00
+
+  Action Distribution:
+    Monitor     :   0.00
+    Basic Preservation:  41.80
+    Transport to Market:   1.04
+    Reuse/Donate:  54.86
+    Advanced Preservation:   0.00
+    Emergency Transport:   0.00
+    Compost     :   0.00
+    Process Products:   0.00
+
+================================================================================
+Key Insights
+================================================================================
+
+� Best performing algorithm: PPO
+� Achieved mean reward: 118.70
+� Loss prevention efficiency: 92.98%
+
+� Best at saving food: PPO
+� Best at generating revenue: DQN
+� Best at food reuse: DQN
+
 
 ### Run Comparison
 
@@ -359,13 +462,5 @@ tensorboard --logdir logs/ &
 
 ---
 
-## 📧 Support
-
-For issues:
-1. Check `test_env.py` passes
-2. Verify `demo_random_agent.py` works
-3. Review error messages
-4. Check file paths are correct
-
----
-
+## Report
+[PDF report][https://docs.google.com/document/d/1lkRvJPlE3TWB6Kn3HnHW5Awq-6r3sL6D-yJLAZsqkFY/edit?tab=t.0]
